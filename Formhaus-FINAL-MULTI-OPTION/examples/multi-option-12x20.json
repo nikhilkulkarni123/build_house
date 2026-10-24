@@ -1,0 +1,1345 @@
+{
+  "plans": [
+    {
+      "schemaVersion": 1,
+      "id": "18adeba7b811",
+      "name": "Option 1 \u00b7 Best ranked",
+      "createdAt": "2026-10-21T19:24:13.795441+00:00",
+      "source": "model",
+      "plot": {
+        "width": 12.0,
+        "length": 20.0,
+        "unit": "ft",
+        "entrance": "North"
+      },
+      "requirements": {
+        "width": 12.0,
+        "length": 20.0,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "parking": false,
+        "entrance": "North",
+        "utility": false,
+        "study": false,
+        "pooja": false,
+        "openSpace": false
+      },
+      "rooms": [
+        {
+          "id": "model-room-1",
+          "name": "Master bedroom",
+          "type": "bedroom",
+          "x": 0.0,
+          "y": 6.502894015457352,
+          "width": 12.0,
+          "height": 5.62119393294954,
+          "colour": "#eee3d1"
+        },
+        {
+          "id": "model-room-2",
+          "name": "Bathroom",
+          "type": "bathroom",
+          "x": 8.424162990151043,
+          "y": 0.0,
+          "width": 3.5758370098489567,
+          "height": 6.502894015457352,
+          "colour": "#dce9eb"
+        },
+        {
+          "id": "model-room-3",
+          "name": "Living room",
+          "type": "living",
+          "x": 0.0,
+          "y": 12.124087948406892,
+          "width": 12.0,
+          "height": 7.875912051593108,
+          "colour": "#d9e7df"
+        },
+        {
+          "id": "model-room-4",
+          "name": "Kitchen",
+          "type": "kitchen",
+          "x": 2.952531588914363,
+          "y": 0.0,
+          "width": 5.47163140123668,
+          "height": 6.502894015457352,
+          "colour": "#dae4ed"
+        },
+        {
+          "id": "model-passage",
+          "name": "Passage",
+          "type": "passage",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 2.952531588914363,
+          "height": 6.502894015457352,
+          "colour": "#f1eee7"
+        }
+      ],
+      "doors": [
+        {
+          "id": "entrance-door",
+          "from": "outside",
+          "to": "model-room-4",
+          "x": 6.0,
+          "y": 0.0,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "entrance"
+        },
+        {
+          "id": "connect-4-5",
+          "from": "model-room-4",
+          "to": "model-passage",
+          "x": 2.952531588914363,
+          "y": 3.251447007728676,
+          "width": 3.0,
+          "orientation": "vertical",
+          "kind": "opening"
+        },
+        {
+          "id": "connect-1-5",
+          "from": "model-room-1",
+          "to": "model-passage",
+          "x": 1.6512657944571816,
+          "y": 6.502894015457352,
+          "width": 2.502531588914363,
+          "orientation": "horizontal",
+          "kind": "opening"
+        },
+        {
+          "id": "connect-1-3",
+          "from": "model-room-1",
+          "to": "model-room-3",
+          "x": 4.334654688835144,
+          "y": 12.124087948406892,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "internal"
+        },
+        {
+          "id": "connect-2-4",
+          "from": "model-room-2",
+          "to": "model-room-4",
+          "x": 8.424162990151043,
+          "y": 4.602045118808746,
+          "width": 3.0,
+          "orientation": "vertical",
+          "kind": "internal"
+        }
+      ],
+      "windows": [],
+      "wallHeight": 9,
+      "wallThickness": 0.5,
+      "notes": [
+        "This is one stochastic learned alternative sampled around the final neural room-site/area prediction; no room-type placement template is used.",
+        "Room sites and target areas come from the frozen physical-size-aware neural decoder; the generic joint slicing decoder turns those learned signals into one exhaustive orthogonal partition.",
+        "A generic shared-wall connectivity decoder uses learned adjacency probabilities plus physical wall contact to create a traversable door graph; it never changes room placement.",
+        "The joint partition is exhaustive: requested rooms plus passage cover 100% of the plot with zero gaps and zero overlaps.",
+        "The same selected candidate geometry is used by both the 2D plan and the 3D viewer.",
+        "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+      ],
+      "modelPrediction": {
+        "imageSize": 0,
+        "trainingImageSize": 64,
+        "inferenceMode": "joint-partition-multi-option",
+        "grid": [],
+        "plotMask": [],
+        "doorMask": [],
+        "plotBox": {
+          "left": 0,
+          "top": 0,
+          "width": 1,
+          "height": 1
+        },
+        "roomSlots": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "pixels": 1,
+            "plotShare": 0.28105969664747704,
+            "areaSqFt": 67.45432719539448,
+            "labelX": 6.0,
+            "labelY": 9.313490981932123,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "pixels": 1,
+            "plotShare": 0.09688870454832373,
+            "areaSqFt": 23.253289091597694,
+            "labelX": 10.212081495075521,
+            "labelY": 3.251447007728676,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "pixels": 1,
+            "plotShare": 0.3937956025796554,
+            "areaSqFt": 94.5109446191173,
+            "labelX": 6.0,
+            "labelY": 16.062043974203448,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "pixels": 1,
+            "plotShare": 0.14825599622454388,
+            "areaSqFt": 35.58143909389053,
+            "labelX": 5.688347289532703,
+            "labelY": 3.251447007728676,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          }
+        ],
+        "structuredBoxes": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "x0": 0.0,
+            "y0": 0.3251447007728676,
+            "x1": 1.0,
+            "y1": 0.6062043974203446,
+            "plotShare": 0.28105969664747704,
+            "areaSqFt": 67.45432719539448,
+            "labelX": 6.0,
+            "labelY": 9.313490981932123
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "x0": 0.7020135825125869,
+            "y0": 0.0,
+            "x1": 1.0,
+            "y1": 0.3251447007728676,
+            "plotShare": 0.09688870454832373,
+            "areaSqFt": 23.253289091597694,
+            "labelX": 10.212081495075521,
+            "labelY": 3.251447007728676
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "x0": 0.0,
+            "y0": 0.6062043974203446,
+            "x1": 1.0,
+            "y1": 1.0,
+            "plotShare": 0.3937956025796554,
+            "areaSqFt": 94.5109446191173,
+            "labelX": 6.0,
+            "labelY": 16.062043974203448
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "x0": 0.24604429907619693,
+            "y0": 0.0,
+            "x1": 0.7020135825125869,
+            "y1": 0.3251447007728676,
+            "plotShare": 0.14825599622454388,
+            "areaSqFt": 35.58143909389053,
+            "labelX": 5.688347289532703,
+            "labelY": 3.251447007728676
+          }
+        ],
+        "requestedTypeIds": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "missingRequestedRooms": [],
+        "checkpointEpoch": 9,
+        "validationLoss": 1.7345980405807495,
+        "totalOverlapShare": 0.0,
+        "overlapPairs": [],
+        "trainingMethod": "frozen validated room decoder plus teacher-probability-distilled passage, maximum-spanning contact graph, adjacency and door heads; no runtime room-placement templates",
+        "feasibility": {
+          "practical": false,
+          "plotAreaSqFt": 240.0,
+          "undersizedRooms": [
+            {
+              "name": "Master bedroom",
+              "predicted": [
+                5.62,
+                12.0
+              ],
+              "minimum": [
+                6.5,
+                8.0
+              ]
+            }
+          ],
+          "note": "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+        },
+        "circulation": {
+          "name": "Passage / circulation",
+          "type": "passage",
+          "colour": "#f1eee7",
+          "x0": 0.0,
+          "y0": 0.0,
+          "x1": 0.24604429907619693,
+          "y1": 0.3251447007728676,
+          "x": 0.0,
+          "y": 0.0,
+          "width": 2.952531588914363,
+          "height": 6.502894015457352,
+          "areaSqFt": 19.2,
+          "note": "Passage is a joint learned-site partition leaf; it is part of the exhaustive partition rather than an overlay."
+        },
+        "adjacencyEdges": [
+          {
+            "id": "learned-edge-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "probability": 0.9565675854682922
+          },
+          {
+            "id": "learned-edge-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "probability": 0.47671905159950256
+          },
+          {
+            "id": "learned-edge-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "probability": 0.8793227672576904
+          },
+          {
+            "id": "learned-edge-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "probability": 0.9126405715942383
+          }
+        ],
+        "doorCandidates": [
+          {
+            "id": "door-candidate-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "x": 4.334654688835144,
+            "y": 14.544236660003662,
+            "orientation": "vertical",
+            "orientationProbability": 0.5360898971557617,
+            "adjacencyProbability": 0.9565675854682922,
+            "width": 2.8,
+            "renderedAsWallOpening": true
+          },
+          {
+            "id": "door-candidate-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "x": 1.165869265794754,
+            "y": 15.474741458892822,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4865451753139496,
+            "adjacencyProbability": 0.47671905159950256,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          },
+          {
+            "id": "door-candidate-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "x": 5.574471116065979,
+            "y": 10.072413682937622,
+            "orientation": "vertical",
+            "orientationProbability": 0.9010873436927795,
+            "adjacencyProbability": 0.8793227672576904,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          },
+          {
+            "id": "door-candidate-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "x": 6.588054656982422,
+            "y": 11.40909194946289,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4821321666240692,
+            "adjacencyProbability": 0.9126405715942383,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          }
+        ],
+        "coverage": {
+          "roomUnionShare": 0.92,
+          "circulationVisibleShare": 0.08,
+          "residualShare": 0.0,
+          "method": "exhaustive joint learned-site slicing partition; zero residual by construction"
+        },
+        "partitionMethod": "stochastic learned-site recursive slicing; neural sites/areas are sampled with room-type-agnostic latent noise, then jointly partitioned with no semantic room-placement rules",
+        "candidateSeed": 1862528509,
+        "latentStrength": 0.072,
+        "candidateScore": 94.873,
+        "candidateMetrics": {
+          "reachableShare": 1.0,
+          "allReachable": true,
+          "meanRoomAspect": 1.6664,
+          "compactnessScore": 1.0,
+          "passageWidthFt": 2.953,
+          "practical": false,
+          "undersizedCount": 1,
+          "doorCount": 5,
+          "reachableRoomIds": [
+            "model-room-1",
+            "model-room-2",
+            "model-room-3",
+            "model-room-4",
+            "model-passage"
+          ],
+          "unreachableRooms": []
+        },
+        "candidateRank": 1,
+        "sourceCandidateIndex": 6,
+        "diversityFromBest": 0.0
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "30d0f9adb200",
+      "name": "Option 2 \u00b7 Alternative layout",
+      "createdAt": "2026-10-21T19:24:13.800903+00:00",
+      "source": "model",
+      "plot": {
+        "width": 12.0,
+        "length": 20.0,
+        "unit": "ft",
+        "entrance": "North"
+      },
+      "requirements": {
+        "width": 12.0,
+        "length": 20.0,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "parking": false,
+        "entrance": "North",
+        "utility": false,
+        "study": false,
+        "pooja": false,
+        "openSpace": false
+      },
+      "rooms": [
+        {
+          "id": "model-room-1",
+          "name": "Master bedroom",
+          "type": "bedroom",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 6.675586339429268,
+          "height": 10.780755948075612,
+          "colour": "#eee3d1"
+        },
+        {
+          "id": "model-room-2",
+          "name": "Bathroom",
+          "type": "bathroom",
+          "x": 8.502857267209173,
+          "y": 10.780755948075612,
+          "width": 3.4971427327908264,
+          "height": 9.219244051924388,
+          "colour": "#dce9eb"
+        },
+        {
+          "id": "model-room-3",
+          "name": "Living room",
+          "type": "living",
+          "x": 0.0,
+          "y": 10.780755948075612,
+          "width": 8.502857267209173,
+          "height": 9.219244051924388,
+          "colour": "#d9e7df"
+        },
+        {
+          "id": "model-room-4",
+          "name": "Kitchen",
+          "type": "kitchen",
+          "x": 6.675586339429268,
+          "y": 3.606030865367046,
+          "width": 5.324413660570732,
+          "height": 7.174725082708565,
+          "colour": "#dae4ed"
+        },
+        {
+          "id": "model-passage",
+          "name": "Passage",
+          "type": "passage",
+          "x": 6.675586339429268,
+          "y": 0.0,
+          "width": 5.324413660570732,
+          "height": 3.606030865367046,
+          "colour": "#f1eee7"
+        }
+      ],
+      "doors": [
+        {
+          "id": "entrance-door",
+          "from": "outside",
+          "to": "model-room-1",
+          "x": 5.155586339429268,
+          "y": 0.0,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "entrance"
+        },
+        {
+          "id": "connect-1-3",
+          "from": "model-room-1",
+          "to": "model-room-3",
+          "x": 4.334654688835144,
+          "y": 10.780755948075612,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "internal"
+        },
+        {
+          "id": "connect-2-3",
+          "from": "model-room-2",
+          "to": "model-room-3",
+          "x": 8.502857267209173,
+          "y": 12.330755948075613,
+          "width": 3.0,
+          "orientation": "vertical",
+          "kind": "internal"
+        },
+        {
+          "id": "connect-4-5",
+          "from": "model-room-4",
+          "to": "model-passage",
+          "x": 9.337793169714635,
+          "y": 3.606030865367046,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "opening"
+        },
+        {
+          "id": "extra-1-5",
+          "from": "model-room-1",
+          "to": "model-passage",
+          "x": 6.675586339429268,
+          "y": 2.1560308653670464,
+          "width": 2.8,
+          "orientation": "vertical",
+          "kind": "opening"
+        }
+      ],
+      "windows": [],
+      "wallHeight": 9,
+      "wallThickness": 0.5,
+      "notes": [
+        "This is one stochastic learned alternative sampled around the final neural room-site/area prediction; no room-type placement template is used.",
+        "Room sites and target areas come from the frozen physical-size-aware neural decoder; the generic joint slicing decoder turns those learned signals into one exhaustive orthogonal partition.",
+        "A generic shared-wall connectivity decoder uses learned adjacency probabilities plus physical wall contact to create a traversable door graph; it never changes room placement.",
+        "The joint partition is exhaustive: requested rooms plus passage cover 100% of the plot with zero gaps and zero overlaps.",
+        "The same selected candidate geometry is used by both the 2D plan and the 3D viewer.",
+        "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+      ],
+      "modelPrediction": {
+        "imageSize": 0,
+        "trainingImageSize": 64,
+        "inferenceMode": "joint-partition-multi-option",
+        "grid": [],
+        "plotMask": [],
+        "doorMask": [],
+        "plotBox": {
+          "left": 0,
+          "top": 0,
+          "width": 1,
+          "height": 1
+        },
+        "roomSlots": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "pixels": 1,
+            "plotShare": 0.29986611306539324,
+            "areaSqFt": 71.96786713569438,
+            "labelX": 3.337793169714634,
+            "labelY": 5.390377974037806,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "pixels": 1,
+            "plotShare": 0.1343375514083851,
+            "areaSqFt": 32.241012338012425,
+            "labelX": 10.251428633604586,
+            "labelY": 15.390377974037806,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "pixels": 1,
+            "plotShare": 0.32662465118783424,
+            "areaSqFt": 78.38991628508022,
+            "labelX": 4.251428633604586,
+            "labelY": 15.390377974037806,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "pixels": 1,
+            "plotShare": 0.15917168433838733,
+            "areaSqFt": 38.201204241212956,
+            "labelX": 9.337793169714633,
+            "labelY": 7.193393406721329,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          }
+        ],
+        "structuredBoxes": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "x0": 0.0,
+            "y0": 0.0,
+            "x1": 0.5562988616191057,
+            "y1": 0.5390377974037805,
+            "plotShare": 0.29986611306539324,
+            "areaSqFt": 71.96786713569438,
+            "labelX": 3.337793169714634,
+            "labelY": 5.390377974037806
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "x0": 0.7085714389340978,
+            "y0": 0.5390377974037805,
+            "x1": 1.0,
+            "y1": 1.0,
+            "plotShare": 0.1343375514083851,
+            "areaSqFt": 32.241012338012425,
+            "labelX": 10.251428633604586,
+            "labelY": 15.390377974037806
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "x0": 0.0,
+            "y0": 0.5390377974037805,
+            "x1": 0.7085714389340978,
+            "y1": 1.0,
+            "plotShare": 0.32662465118783424,
+            "areaSqFt": 78.38991628508022,
+            "labelX": 4.251428633604586,
+            "labelY": 15.390377974037806
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "x0": 0.5562988616191057,
+            "y0": 0.1803015432683523,
+            "x1": 1.0,
+            "y1": 0.5390377974037805,
+            "plotShare": 0.15917168433838733,
+            "areaSqFt": 38.201204241212956,
+            "labelX": 9.337793169714633,
+            "labelY": 7.193393406721329
+          }
+        ],
+        "requestedTypeIds": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "missingRequestedRooms": [],
+        "checkpointEpoch": 9,
+        "validationLoss": 1.7345980405807495,
+        "totalOverlapShare": 0.0,
+        "overlapPairs": [],
+        "trainingMethod": "frozen validated room decoder plus teacher-probability-distilled passage, maximum-spanning contact graph, adjacency and door heads; no runtime room-placement templates",
+        "feasibility": {
+          "practical": false,
+          "plotAreaSqFt": 240.0,
+          "undersizedRooms": [
+            {
+              "name": "Bathroom",
+              "predicted": [
+                3.5,
+                9.22
+              ],
+              "minimum": [
+                3.5,
+                5.0
+              ]
+            }
+          ],
+          "note": "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+        },
+        "circulation": {
+          "name": "Passage / circulation",
+          "type": "passage",
+          "colour": "#f1eee7",
+          "x0": 0.5562988616191057,
+          "y0": 0.0,
+          "x1": 1.0,
+          "y1": 0.1803015432683523,
+          "x": 6.675586339429268,
+          "y": 0.0,
+          "width": 5.324413660570732,
+          "height": 3.606030865367046,
+          "areaSqFt": 19.2,
+          "note": "Passage is a joint learned-site partition leaf; it is part of the exhaustive partition rather than an overlay."
+        },
+        "adjacencyEdges": [
+          {
+            "id": "learned-edge-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "probability": 0.9565675854682922
+          },
+          {
+            "id": "learned-edge-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "probability": 0.47671905159950256
+          },
+          {
+            "id": "learned-edge-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "probability": 0.8793227672576904
+          },
+          {
+            "id": "learned-edge-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "probability": 0.9126405715942383
+          }
+        ],
+        "doorCandidates": [
+          {
+            "id": "door-candidate-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "x": 4.334654688835144,
+            "y": 14.544236660003662,
+            "orientation": "vertical",
+            "orientationProbability": 0.5360898971557617,
+            "adjacencyProbability": 0.9565675854682922,
+            "width": 2.8,
+            "renderedAsWallOpening": true
+          },
+          {
+            "id": "door-candidate-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "x": 1.165869265794754,
+            "y": 15.474741458892822,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4865451753139496,
+            "adjacencyProbability": 0.47671905159950256,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          },
+          {
+            "id": "door-candidate-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "x": 5.574471116065979,
+            "y": 10.072413682937622,
+            "orientation": "vertical",
+            "orientationProbability": 0.9010873436927795,
+            "adjacencyProbability": 0.8793227672576904,
+            "width": 2.8,
+            "renderedAsWallOpening": true
+          },
+          {
+            "id": "door-candidate-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "x": 6.588054656982422,
+            "y": 11.40909194946289,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4821321666240692,
+            "adjacencyProbability": 0.9126405715942383,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          }
+        ],
+        "coverage": {
+          "roomUnionShare": 0.92,
+          "circulationVisibleShare": 0.08,
+          "residualShare": 0.0,
+          "method": "exhaustive joint learned-site slicing partition; zero residual by construction"
+        },
+        "partitionMethod": "stochastic learned-site recursive slicing; neural sites/areas are sampled with room-type-agnostic latent noise, then jointly partitioned with no semantic room-placement rules",
+        "candidateSeed": 2794009929,
+        "latentStrength": 0.12,
+        "candidateScore": 94.173,
+        "candidateMetrics": {
+          "reachableShare": 1.0,
+          "allReachable": true,
+          "meanRoomAspect": 1.6707,
+          "compactnessScore": 0.9586,
+          "passageWidthFt": 3.606,
+          "practical": false,
+          "undersizedCount": 1,
+          "doorCount": 5,
+          "reachableRoomIds": [
+            "model-room-1",
+            "model-room-2",
+            "model-room-3",
+            "model-room-4",
+            "model-passage"
+          ],
+          "unreachableRooms": []
+        },
+        "candidateRank": 2,
+        "sourceCandidateIndex": 18,
+        "diversityFromBest": 0.1795
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "id": "ecfabcd048d0",
+      "name": "Option 3 \u00b7 Alternative layout",
+      "createdAt": "2026-10-21T19:24:13.799603+00:00",
+      "source": "model",
+      "plot": {
+        "width": 12.0,
+        "length": 20.0,
+        "unit": "ft",
+        "entrance": "North"
+      },
+      "requirements": {
+        "width": 12.0,
+        "length": 20.0,
+        "bedrooms": 1,
+        "bathrooms": 1,
+        "parking": false,
+        "entrance": "North",
+        "utility": false,
+        "study": false,
+        "pooja": false,
+        "openSpace": false
+      },
+      "rooms": [
+        {
+          "id": "model-room-1",
+          "name": "Master bedroom",
+          "type": "bedroom",
+          "x": 0.0,
+          "y": 0.0,
+          "width": 6.626791369424951,
+          "height": 11.411239487081623,
+          "colour": "#eee3d1"
+        },
+        {
+          "id": "model-room-2",
+          "name": "Bathroom",
+          "type": "bathroom",
+          "x": 6.626791369424951,
+          "y": 0.0,
+          "width": 5.373208630575049,
+          "height": 5.124379578375007,
+          "colour": "#dce9eb"
+        },
+        {
+          "id": "model-room-3",
+          "name": "Living room",
+          "type": "living",
+          "x": 2.2354797262214063,
+          "y": 11.411239487081623,
+          "width": 9.764520273778594,
+          "height": 8.588760512918377,
+          "colour": "#d9e7df"
+        },
+        {
+          "id": "model-room-4",
+          "name": "Kitchen",
+          "type": "kitchen",
+          "x": 6.626791369424951,
+          "y": 5.124379578375007,
+          "width": 5.373208630575049,
+          "height": 6.286859908706617,
+          "colour": "#dae4ed"
+        },
+        {
+          "id": "model-passage",
+          "name": "Passage",
+          "type": "passage",
+          "x": 0.0,
+          "y": 11.411239487081623,
+          "width": 2.2354797262214063,
+          "height": 8.588760512918377,
+          "colour": "#f1eee7"
+        }
+      ],
+      "doors": [
+        {
+          "id": "entrance-door",
+          "from": "outside",
+          "to": "model-room-1",
+          "x": 5.106791369424951,
+          "y": 0.0,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "entrance"
+        },
+        {
+          "id": "connect-1-3",
+          "from": "model-room-1",
+          "to": "model-room-3",
+          "x": 4.334654688835144,
+          "y": 11.411239487081623,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "internal"
+        },
+        {
+          "id": "connect-3-4",
+          "from": "model-room-3",
+          "to": "model-room-4",
+          "x": 8.17679136942495,
+          "y": 11.411239487081623,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "internal"
+        },
+        {
+          "id": "connect-3-5",
+          "from": "model-room-3",
+          "to": "model-passage",
+          "x": 2.2354797262214063,
+          "y": 15.705619743540812,
+          "width": 3.0,
+          "orientation": "vertical",
+          "kind": "opening"
+        },
+        {
+          "id": "connect-2-4",
+          "from": "model-room-2",
+          "to": "model-room-4",
+          "x": 8.17679136942495,
+          "y": 5.124379578375007,
+          "width": 3.0,
+          "orientation": "horizontal",
+          "kind": "internal"
+        },
+        {
+          "id": "extra-1-5",
+          "from": "model-room-1",
+          "to": "model-passage",
+          "x": 1.2854797262214064,
+          "y": 11.411239487081623,
+          "width": 1.8,
+          "orientation": "horizontal",
+          "kind": "opening"
+        }
+      ],
+      "windows": [],
+      "wallHeight": 9,
+      "wallThickness": 0.5,
+      "notes": [
+        "This is one stochastic learned alternative sampled around the final neural room-site/area prediction; no room-type placement template is used.",
+        "Room sites and target areas come from the frozen physical-size-aware neural decoder; the generic joint slicing decoder turns those learned signals into one exhaustive orthogonal partition.",
+        "A generic shared-wall connectivity decoder uses learned adjacency probabilities plus physical wall contact to create a traversable door graph; it never changes room placement.",
+        "The joint partition is exhaustive: requested rooms plus passage cover 100% of the plot with zero gaps and zero overlaps.",
+        "The same selected candidate geometry is used by both the 2D plan and the 3D viewer.",
+        "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+      ],
+      "modelPrediction": {
+        "imageSize": 0,
+        "trainingImageSize": 64,
+        "inferenceMode": "joint-partition-multi-option",
+        "grid": [],
+        "plotMask": [],
+        "doorMask": [],
+        "plotBox": {
+          "left": 0,
+          "top": 0,
+          "width": 1,
+          "height": 1
+        },
+        "roomSlots": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "pixels": 1,
+            "plotShare": 0.3150829306143071,
+            "areaSqFt": 75.6199033474337,
+            "labelX": 3.3133956847124755,
+            "labelY": 5.705619743540812,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "pixels": 1,
+            "plotShare": 0.114726502403613,
+            "areaSqFt": 27.53436057686712,
+            "labelX": 9.313395684712475,
+            "labelY": 2.5621897891875034,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "pixels": 1,
+            "plotShare": 0.3494380256459188,
+            "areaSqFt": 83.86512615502052,
+            "labelX": 7.117739863110703,
+            "labelY": 15.705619743540812,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "pixels": 1,
+            "plotShare": 0.1407525413361611,
+            "areaSqFt": 33.780609920678664,
+            "labelX": 9.313395684712475,
+            "labelY": 8.267809532728315,
+            "componentCount": 1,
+            "mainComponentPixels": 1
+          }
+        ],
+        "structuredBoxes": [
+          {
+            "slot": 1,
+            "typeId": 1,
+            "name": "Master bedroom",
+            "type": "bedroom",
+            "colour": "#eee3d1",
+            "x0": 0.0,
+            "y0": 0.0,
+            "x1": 0.5522326141187459,
+            "y1": 0.5705619743540812,
+            "plotShare": 0.3150829306143071,
+            "areaSqFt": 75.6199033474337,
+            "labelX": 3.3133956847124755,
+            "labelY": 5.705619743540812
+          },
+          {
+            "slot": 2,
+            "typeId": 3,
+            "name": "Bathroom",
+            "type": "bathroom",
+            "colour": "#dce9eb",
+            "x0": 0.5522326141187459,
+            "y0": 0.0,
+            "x1": 1.0,
+            "y1": 0.25621897891875034,
+            "plotShare": 0.114726502403613,
+            "areaSqFt": 27.53436057686712,
+            "labelX": 9.313395684712475,
+            "labelY": 2.5621897891875034
+          },
+          {
+            "slot": 3,
+            "typeId": 0,
+            "name": "Living room",
+            "type": "living",
+            "colour": "#d9e7df",
+            "x0": 0.1862899771851172,
+            "y0": 0.5705619743540812,
+            "x1": 1.0,
+            "y1": 1.0,
+            "plotShare": 0.3494380256459188,
+            "areaSqFt": 83.86512615502052,
+            "labelX": 7.117739863110703,
+            "labelY": 15.705619743540812
+          },
+          {
+            "slot": 4,
+            "typeId": 2,
+            "name": "Kitchen",
+            "type": "kitchen",
+            "colour": "#dae4ed",
+            "x0": 0.5522326141187459,
+            "y0": 0.25621897891875034,
+            "x1": 1.0,
+            "y1": 0.5705619743540812,
+            "plotShare": 0.1407525413361611,
+            "areaSqFt": 33.780609920678664,
+            "labelX": 9.313395684712475,
+            "labelY": 8.267809532728315
+          }
+        ],
+        "requestedTypeIds": [
+          1,
+          3,
+          0,
+          2
+        ],
+        "missingRequestedRooms": [],
+        "checkpointEpoch": 9,
+        "validationLoss": 1.7345980405807495,
+        "totalOverlapShare": 0.0,
+        "overlapPairs": [],
+        "trainingMethod": "frozen validated room decoder plus teacher-probability-distilled passage, maximum-spanning contact graph, adjacency and door heads; no runtime room-placement templates",
+        "feasibility": {
+          "practical": false,
+          "plotAreaSqFt": 240.0,
+          "undersizedRooms": [
+            {
+              "name": "Kitchen",
+              "predicted": [
+                5.37,
+                6.29
+              ],
+              "minimum": [
+                5.0,
+                6.5
+              ]
+            }
+          ],
+          "note": "The model produced geometry, but one or more rooms are too small for the bundled compact concept-design minimums. Formhaus does not move or resize them with placement rules."
+        },
+        "circulation": {
+          "name": "Passage / circulation",
+          "type": "passage",
+          "colour": "#f1eee7",
+          "x0": 0.0,
+          "y0": 0.5705619743540812,
+          "x1": 0.1862899771851172,
+          "y1": 1.0,
+          "x": 0.0,
+          "y": 11.411239487081623,
+          "width": 2.2354797262214063,
+          "height": 8.588760512918377,
+          "areaSqFt": 19.2,
+          "note": "Passage is a joint learned-site partition leaf; it is part of the exhaustive partition rather than an overlay."
+        },
+        "adjacencyEdges": [
+          {
+            "id": "learned-edge-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "probability": 0.9565675854682922
+          },
+          {
+            "id": "learned-edge-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "probability": 0.47671905159950256
+          },
+          {
+            "id": "learned-edge-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "probability": 0.8793227672576904
+          },
+          {
+            "id": "learned-edge-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "probability": 0.9126405715942383
+          }
+        ],
+        "doorCandidates": [
+          {
+            "id": "door-candidate-1-3",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-3",
+            "roomA": "Master bedroom",
+            "roomB": "Living room",
+            "x": 4.334654688835144,
+            "y": 14.544236660003662,
+            "orientation": "vertical",
+            "orientationProbability": 0.5360898971557617,
+            "adjacencyProbability": 0.9565675854682922,
+            "width": 2.8,
+            "renderedAsWallOpening": true
+          },
+          {
+            "id": "door-candidate-1-4",
+            "roomAId": "model-room-1",
+            "roomBId": "model-room-4",
+            "roomA": "Master bedroom",
+            "roomB": "Kitchen",
+            "x": 1.165869265794754,
+            "y": 15.474741458892822,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4865451753139496,
+            "adjacencyProbability": 0.47671905159950256,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          },
+          {
+            "id": "door-candidate-2-3",
+            "roomAId": "model-room-2",
+            "roomBId": "model-room-3",
+            "roomA": "Bathroom",
+            "roomB": "Living room",
+            "x": 5.574471116065979,
+            "y": 10.072413682937622,
+            "orientation": "vertical",
+            "orientationProbability": 0.9010873436927795,
+            "adjacencyProbability": 0.8793227672576904,
+            "width": 2.8,
+            "renderedAsWallOpening": false
+          },
+          {
+            "id": "door-candidate-3-4",
+            "roomAId": "model-room-3",
+            "roomBId": "model-room-4",
+            "roomA": "Living room",
+            "roomB": "Kitchen",
+            "x": 6.588054656982422,
+            "y": 11.40909194946289,
+            "orientation": "horizontal",
+            "orientationProbability": 0.4821321666240692,
+            "adjacencyProbability": 0.9126405715942383,
+            "width": 2.8,
+            "renderedAsWallOpening": true
+          }
+        ],
+        "coverage": {
+          "roomUnionShare": 0.92,
+          "circulationVisibleShare": 0.08,
+          "residualShare": 0.0,
+          "method": "exhaustive joint learned-site slicing partition; zero residual by construction"
+        },
+        "partitionMethod": "stochastic learned-site recursive slicing; neural sites/areas are sampled with room-type-agnostic latent noise, then jointly partitioned with no semantic room-placement rules",
+        "candidateSeed": 2339350842,
+        "latentStrength": 0.1125,
+        "candidateScore": 92.961,
+        "candidateMetrics": {
+          "reachableShare": 1.0,
+          "allReachable": true,
+          "meanRoomAspect": 1.2694,
+          "compactnessScore": 1.0,
+          "passageWidthFt": 2.235,
+          "practical": false,
+          "undersizedCount": 1,
+          "doorCount": 6,
+          "reachableRoomIds": [
+            "model-room-1",
+            "model-room-2",
+            "model-room-3",
+            "model-room-4",
+            "model-passage"
+          ],
+          "unreachableRooms": []
+        },
+        "candidateRank": 3,
+        "sourceCandidateIndex": 15,
+        "diversityFromBest": 0.161
+      }
+    }
+  ],
+  "generation": {
+    "poolSize": 24,
+    "returned": 3,
+    "method": "latent sampling around learned neural sites/areas + joint partition + generic connectivity validation/ranking"
+  }
+}

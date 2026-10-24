@@ -1,0 +1,16 @@
+{
+  "adjacency_precision": 0.6130653266331658,
+  "adjacency_recall": 0.8133333333333334,
+  "adjacency_f1": 0.6991404011461319,
+  "door_xy_mae_normalized": 0.19804780185222626,
+  "door_orientation_error_rate": 0.3619047701358795,
+  "passage_box_mae_normalized": 0.05317279323935509,
+  "predicted_graph_connected_rate_at_0_5": 0.869,
+  "best_val_loss": 1.7345980405807495,
+  "best_epoch": 67,
+  "room_decoder": "frozen PhysicalRectNet-final-v4",
+  "training_method": "frozen validated room decoder plus teacher-probability-distilled passage, maximum-spanning contact graph, adjacency and door heads; no runtime room-placement templates",
+  "calibrated_adjacency_threshold": 0.45,
+  "validation_graph_connected_rate_at_0_45": 0.943,
+  "validation_mean_edges_at_0_45": 8.5
+}

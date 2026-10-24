@@ -1,0 +1,26 @@
+FORMHAUS FINAL MULTI-OPTION BUILD
+
+Runtime checkpoint:
+  backend/formhaus_final_model.pt
+
+Backend:
+  backend/main.py
+  backend/structured_model.py
+  backend/test_model_service.py
+
+Frontend:
+  src/
+
+Final preview:
+  FINAL-MULTI-OPTION-PREVIEW.png
+
+Example multi-option responses:
+  examples/multi-option-default.json
+  examples/multi-option-3bhk.json
+  examples/multi-option-12x20.json
+
+Verification:
+  FINAL-TEST-RESULTS.md
+
+Run instructions:
+  RUN-WINDOWS.md
